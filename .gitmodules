@@ -1,0 +1,3 @@
+[submodule "vida_config"]
+	path = vida_config
+	url = git@bitbucket.org:vida_wang/vida_config.git
