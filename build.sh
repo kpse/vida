@@ -14,7 +14,7 @@ function load_env {
 }
 
 function build_local {
-#    load_env
+    load_env
     play test
 }
 
@@ -23,11 +23,6 @@ function build_and_push {
     git pull --rebase && \
     build_local && \
     git push origin master
-}
-
-function deploy_heroku {
-    build_local && \
-    git push heroku master
 }
 
 function local_https_server {
@@ -41,6 +36,7 @@ function local_https_server_with_mysql {
 }
 
 function deploy_prod {
+    load_env
     echo ".... start to deploy on env $1 ..."
     now=$(date +"%s")
     srcFilename="$(pwd)/target/universal/vida-1.0-SNAPSHOT.zip"
@@ -52,7 +48,7 @@ function deploy_prod {
     ssh $destServer "unzip -x $destFilename -d /var/play/$now/" && \
     ssh $destServer "rm /var/play/vida" && \
     ssh $destServer "ln -s /var/play/$now/vida-1.0-SNAPSHOT/ /var/play/vida" && \
-    ssh $destServer "echo vvljiv8o | sudo -S service vida restart"
+    ssh $destServer "echo $prod_passwd | sudo -S service vida restart"
 
     retvalue=$?
     echo "Return value: $retvalue"
@@ -61,7 +57,7 @@ function deploy_prod {
 
 
 function build_deploy_stage {
-  build_and_push && deploy_prod 114.215.129.240
+  build_and_push && deploy_prod "$prod_ip"
 }
 
 function js_dependency {
@@ -77,7 +73,6 @@ function usage {
   echo p for git pull/local build/git push
   echo b for local build
   echo js for update javascript dependency
-  echo heroku for deploy to heroku
   echo none of the above will trigger local build only
   echo ======================
 }
@@ -88,9 +83,8 @@ function main {
 		s) local_https_server ;;
 		mysql) local_https_server_with_mysql ;;
 		a) build_deploy_stage ;;
-		heroku) deploy_heroku ;;
-		prod) deploy_prod 114.215.129.240 ;;
-		d) deploy_prod 114.215.129.240 ;;
+		prod) deploy_prod "$prod_ip" ;;
+		d) deploy_prod "$prod_ip" ;;
 		p) build_and_push ;;
 		b) build_local ;;
 		h) usage ;;
