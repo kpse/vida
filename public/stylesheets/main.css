@@ -18,7 +18,7 @@
   display: block;
   height: 42px;
   z-index: 100;
-  background: #000 url(../images/user-placeholder.png) no-repeat 12px 12px;
+  background: #231f20 url(../images/user-placeholder.png) no-repeat 12px 12px;
   background-size: 50%;
 }
 
@@ -60,7 +60,7 @@
 
 
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
   padding:0;
   height:100%;
