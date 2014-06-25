@@ -36,7 +36,6 @@ function local_https_server_with_mysql {
 }
 
 function deploy_prod {
-    load_env
     echo ".... start to deploy on env $1 ..."
     now=$(date +"%s")
     srcFilename="$(pwd)/target/universal/vida-1.0-SNAPSHOT.zip"
@@ -83,8 +82,8 @@ function main {
 		s) local_https_server ;;
 		mysql) local_https_server_with_mysql ;;
 		a) build_deploy_stage ;;
-		prod) deploy_prod "$prod_ip" ;;
-		d) deploy_prod "$prod_ip" ;;
+		prod) load_env && deploy_prod "$prod_ip" ;;
+		d) load_env && deploy_prod "$prod_ip" ;;
 		p) build_and_push ;;
 		b) build_local ;;
 		h) usage ;;
