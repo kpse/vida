@@ -4,35 +4,48 @@
 
 .footer {
   display: block;
-  background: #231f20 url(../images/menu_bg.png) no-repeat -32px 3px;
-  background-size: 115% 89%;
   bottom: -1px;
   position: absolute;
   padding: 0;
-  width: 100%;
+  width: 105%;
   height: 50px;
-}
-
-.profile {
-  display: block;
-  height: 42px;
-  z-index: 100;
-  background: #231f20 url(../images/user-placeholder.png) no-repeat 12px 12px;
-  background-size: 50%;
+  max-width: 336px;
 }
 
 .menu {
-  width: 19%;
-  height: 42px;
+  float: left;
+  width: 20%;
+  height: 50px;
   color: #000;
   margin-bottom: -9px;
   text-align: center;
-  display: none;
+  display: block;
+  &.active {
+    color: red;
+  }
+  &.home {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -18px 0;
+    background-size: 350px 50px;
+  }
+  &.search {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -79px 0;
+    background-size: 352px 50px;
+  }
+  &.party {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -137px 0;
+    background-size: 350px 50px;
+  }
+  &.shopping {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -203px 0;
+    background-size: 350px 50px;
+  }
+  &.profile {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -266px 4px;
+    background-size: 350px 50px;
+  }
 }
 
-.menu.active {
-  color: red;
-}
+
 
 .hero {
   min-height: 200px;
