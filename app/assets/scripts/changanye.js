@@ -1,10 +1,10 @@
 var isAd2 = /android\s*2\./i.test(navigator.userAgent);
 var mi2a = /mi 2a/i.test(navigator.userAgent);
 var share = {
-  title: '长安夜',
-  link: 'http://kpse.github.io/css_animation2',
-  desc: '长安夜乐队介绍及订票信息',
-  img: 'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/im_share.jpg'
+  title: '陕派摇滚&长安夜',
+  link: 'http://114.215.129.240/changanye',
+  desc: '陕派摇滚&长安夜介绍及订票信息',
+  img: 'http://114.215.129.240/assets/images/rock.jpg'
 };
 function $(o) {
   return document.querySelector(o)
