@@ -741,7 +741,7 @@ var data = [
   </div>\
   <div class="bg"></div>',
   //7
-  '<div class="bg order"></div>'
+  '<a href="http://item.damai.cn/74549.html"><div class="bg order"></div></a>'
 ];
 
 var comdata = [[
@@ -777,7 +777,8 @@ function preloading() {
     'assets/images/shisanlang.jpg',
     'assets/images/xuanyuedui.jpg',
     'assets/images/ali.jpg',
-    'assets/images/order.png'
+    'assets/images/order.jpg',
+    'assets/images/small_icons.png'
   ];
   var imgs = [], loaded = 0;
   for (var i = 0; i < imgurls.length; i++) {
@@ -803,12 +804,7 @@ function loading() {
   $('#loading').style.opacity = 1;
   var imgurls = [
     'assets/images/cover.jpg',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/sprite.png?max_age=2592000',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/im_cover.jpg?max_age=2592000',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/im_top.png?max_age=2592000',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/im_video.jpg?max_age=2592000',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/im_photo.jpg?max_age=2592000',
-    'http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/bg1.jpg?max_age=2592000'
+    'assets/images/small_icons.png'
   ];
   var imgs = [], loaded = 0;
   for (var i = 0; i < imgurls.length; i++) {
@@ -863,47 +859,6 @@ function slideCallback(index) {
   $$('.mod_control .mod_tag li')[index].className = 'current';
 }
 
-var QQMusic = {
-  downAndroid: 'http://misc.wcd.qq.com/app?packageName=com.tencent.qqmusic&channelId=10000633',
-  downIphone: 'http://y.qq.com/m/tj_appstore.html?ADTAG=year10',
-  open: function (url) {
-    if (navigator.userAgent.match(/Android/i)) {
-      this.openAndroid(url);
-    } else if (navigator.userAgent.match(/iPhone|iPod/i)) {
-      this.openIphone(url);
-    }
-  },
-  openAndroid: function (schemeUrl) {
-    var iframe = document.createElement("iframe");
-    iframe.style.cssText = "width:1px;height:1px;position:fixed;top:0;left:0;opacity:0;"
-    var start = new Date().valueOf();
-    iframe.src = schemeUrl;
-    // 执行打开动作
-    document.body.appendChild(iframe);
-    setTimeout(function () {
-      var end = new Date().valueOf();
-      if (( end - start ) < 1550) {
-        // 打开失败进入这个异常处理
-        window.location.href = QQMusic.downAndroid;
-      }
-    }, 1500);
-  },
-  openIphone: function (schemeUrl) {
-    var start = new Date().valueOf();
-    // 执行打开动作
-    window.location.href = schemeUrl;
-    setTimeout(function () {
-      var end = new Date().valueOf();
-      if (( end - start ) < 1550) {
-        // 打开失败进入这个异常处理
-        setTimeout(function () {
-          window.location.href = QQMusic.downIphone;
-        }, 100);
-      }
-    }, 1500);
-  }
-};
-
 $('#audio').addEventListener('pause', function () {
   $('#btn_audio').className = 'audio_btn icon_sound_off'
 }, false);
@@ -912,50 +867,9 @@ $('#audio').addEventListener('playing', function () {
   $('#btn_audio').className = 'audio_btn icon_sound_on';
 }, false);
 
-var singerid = 143;
-$('#btn_favorite').addEventListener('click', function () {
-  tj.sendClick('act.year10.fav.y06');
-  if (M && M.bridge) {
-    M.bridge.callHandler('8', {'k1': singerid}, function () {
-    });
-  } else if (navigator.userAgent.match(/Android/)) {
-    QQMusic.open('androidqqmusic://from=html5page&mid=8&k1=' + singerid + '&k2=&k3=5q2M5omL&k4=&k5=&k6=');
-  } else if (navigator.userAgent.match(/iPhone|iPod/)) {
-    QQMusic.open('qqmusic://from=html5page&mid=8&k1=' + singerid + '&k2=&k3=5q2M5omL&k4=&k5=&k6=');
-  }
-}, false)
 
 var M = M || {};
 
-function playAlbum(o) {
-  tj.sendClick('act.year10.openalbum.y06');
-  var id = o.getAttribute('data-id') || getParam('albumid', o.href);
-  if (M.bridge) {
-    M.bridge.callHandler('6', {
-      "k1": id,
-      "k2": "http://y.qq.com/v3/static/album/" + id % 100 + "/album_" + id + "_0.json.z",
-      "k3": "5LiT6L6R",
-      "k4": 10002,
-      "k5": "",
-      "k6": "",
-      "k7": ""
-    }, function () {
-    });
-    return false;
-  } else {
-    if (navigator.userAgent.indexOf('QQ/') >= 0) {
-      loadUrl('http://pub.idqqimg.com/qqmobile/qqapi.js?max_age=2592000', function () {
-        mqq.ui.openUrl({
-          url: 'http://y.qq.com/w/album.html?albumid=' + id,
-          target: 1,
-          style: 1
-        });
-      })
-    } else {
-      location.href = 'http://y.qq.com/w/album.html?albumid=' + id
-    }
-  }
-}
 
 $('#arr').onclick = function () {
   nextImg()

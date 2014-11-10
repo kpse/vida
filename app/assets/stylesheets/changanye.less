@@ -84,7 +84,7 @@ html, body {
     top: 100%;
   }
   100% {
-    top: 50%;
+    top: 40%;
   }
 }
 
@@ -120,7 +120,7 @@ html, body {
 
 .item .box.height50 {
   top: 100%;
-  height: 50%;
+  height: 60%;
 }
 
 .play.item .box {
@@ -128,7 +128,7 @@ html, body {
 }
 
 .play.item .box.height50 {
-  top: 50%;
+  top: 40%;
 }
 
 .item .box .desc {
@@ -136,7 +136,7 @@ html, body {
 }
 
 .item .box .high-light {
-  color: red;
+  color: rgb(140, 6, 6);
 }
 
 .play.item .box.up {
@@ -190,8 +190,8 @@ html, body {
 
 .icon, .audio_btn, .ynt_song:after, .bg_fans_title p:before, .ten_fptit:before, .ten_sptit:before {
   display: inline-block;
-  background-image: url(http://imgcache.gtimg.cn/mediastyle/mobile/event/20141013_ten_eason/img/sprite.png?max_age=2592000);
-  background-size: 35px 260px;
+  background: url(../images/small_icons.png) no-repeat;
+  background-size: 700%;
   vertical-align: middle;
 }
 
@@ -203,9 +203,9 @@ html, body {
 }
 
 .icon_slide {
-  width: 34px;
-  height: 34px;
-  background-position: 0 -39px;
+  width: 80px;
+  height: 109px;
+  -webkit-animation: start 1.5s infinite linear;
 }
 
 .icon_favorite {
@@ -215,37 +215,22 @@ html, body {
 }
 
 .icon_sound_off {
-  width: 13px;
-  height: 12px;
-  background-position: -27px 0;
-  vertical-align: -2px;
-  margin-right: 3px;
+  background-position: -600px -22px;
 }
 
 .icon_sound_on {
-  width: 13px;
-  height: 12px;
-  background-position: -27px -13px;
-  vertical-align: -2px;
-  margin-right: 3px;
+  background-position: -600px -22px;
 }
 
 .audio_btn {
-  background-position: 0 -105px;
-  width: 27px;
-  height: 27px;
+  background-position: -600px -22px;
+  background-size: 600%;
+  width: 120px;
+  height: 120px;
   position: absolute;
   z-index: 990;
   right: 5%;
   top: 14px;
-}
-
-.icon_sound_on {
-  background-position: 0 -105px;
-}
-
-.icon_sound_off {
-  background-position: 0 -135px;
 }
 
 .icon_yqlogo {
@@ -260,36 +245,30 @@ html, body {
   position: absolute;
   z-index: 20;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -60px;
   bottom: 15px;
-  width: 34px;
-  height: 34px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
   text-align: center;
   border: 1px solid #fff;
   -webkit-border-radius: 20px;
   border-radius: 20px;
+  background-color: #ffffff;
 }
 
-.mod_start .icon_slide {
-  margin-top: 8px;
-}
-
-.icon_slide {
-  -webkit-animation: start 1.5s infinite linear;
-}
 
 @-webkit-keyframes start {
   0%, 50% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate(0, 12px);
   }
   75% {
-    opacity: 1;
+    opacity: .6;
     -webkit-transform: translate(0, 2px);
   }
   100% {
-    opacity: 0;
+    opacity: .3;
     -webkit-transform: translate(0, -8px);
   }
 }
@@ -444,8 +423,7 @@ html, body {
 }
 
 .item-7 .bg {
-  background-image: url(../images/order.png);
-  background-size: 100%;
+  background-image: url(../images/order.jpg);
 }
 
 
