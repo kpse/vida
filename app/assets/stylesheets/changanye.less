@@ -48,7 +48,7 @@ html, body {
 #wrap {
   position: relative;
   height: 100%;
-  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -192,7 +192,7 @@ html, body {
   border-radius: 20px;
 }
 
-.mod_start.icon_slide {
+.mod_start .icon_slide {
   margin-top: 8px;
 }
 
@@ -266,14 +266,14 @@ html, body {
   right: 25px;
 }
 
-#share_btn_tip.bottom {
+#share_btn_tip .bottom {
   border-right: 1px solid #3e3e3e;
   border-bottom: 1px solid #3e3e3e;
   -webkit-transform: rotate(45deg);
   bottom: -5px;
 }
 
-#share_btn_tip.top {
+#share_btn_tip .top {
   border-left: 1px solid #3e3e3e;
   border-top: 1px solid #3e3e3e;
   -webkit-transform: rotate(-45deg);
@@ -296,7 +296,7 @@ html, body {
   margin-bottom: 7px;
 }
 
-.mod_tag.current {
+.mod_tag .current {
   width: 10px;
   height: 10px;
   -webkit-border-radius: 5px;
@@ -386,7 +386,7 @@ html, body {
   -webkit-transition: all .8s ease-in-out .4s;
 }
 
-.play.item-0 .bg {
+.play .item-0 .bg {
   opacity: 1;
 }
 
@@ -409,18 +409,18 @@ html, body {
   position: relative;
 }
 
-.mod_intro.ihead_pic {
+.mod_intro .ihead_pic {
   float: left;
   width: 111px;
 }
 
-.mod_intro.ihead_pic img {
+.mod_intro .ihead_pic img {
   display: block;
   border-radius: 60px;
   width: 100%;
 }
 
-.mod_intro.per_info {
+.mod_intro .per_info {
   float: right;
   width: 150px;
   font-size: 12px;
@@ -428,7 +428,7 @@ html, body {
   line-height: 20px;
 }
 
-.mod_intro.per_info em {
+.mod_intro .per_info em {
   color: #ad1c1c;
   font-style: normal;
   font-weight: normal;
@@ -463,64 +463,59 @@ html, body {
   -webkit-transition-delay: .3s;
 }
 
-.play.mod_intro.per_info {
+.play.mod_intro .per_info {
   -webkit-transition-delay: .4s;
 }
 
-.play.mod_intro.tenp_info {
+.play.mod_intro .tenp_info {
   -webkit-transition-delay: .5s;
 }
 
-.play.mod_year.mod_yntit {
+.play.mod_year .mod_yntit {
   -webkit-transition-delay: .2s;
 }
 
-.play.mod_year.yrdet_box {
+.play.mod_year .yrdet_box {
   -webkit-transition-delay: .4s;
 }
 
-.play.mod_year.year_tenp {
+.play.mod_year .year_tenp {
   -webkit-transition-delay: .5s;
 }
 
-.play.fans_photo {
+.play .fans_photo {
   -webkit-transition-delay: .3s;
 }
 
-.play.item-7.fans_t {
+.play .item-7.fans_t {
   -webkit-transition-delay: .5s;
 }
 
-.play.bitem_wrap {
+.play .bitem_wrap {
   -webkit-transition-delay: .3s;
 }
 
-.play.tag_x {
+.play .tag_x {
   -webkit-transition-delay: .7s;
 }
 
-.play.old_list.old_item:nth-of-type
-(1) {
+.play .old_list .old_item:nth-of-type(1) {
   -webkit-transition-delay: .2s;
 }
 
-.play.old_list.old_item:nth-of-type
-(2) {
+.play .old_list .old_item:nth-of-type(2) {
   -webkit-transition-delay: .3s;
 }
 
-.play.old_list.old_item:nth-of-type
-(3) {
+.play .old_list .old_item:nth-of-type(3) {
   -webkit-transition-delay: .3s;
 }
 
-.play.old_list.old_item:nth-of-type
-(4) {
+.play .old_list .old_item:nth-of-type(4) {
   -webkit-transition-delay: .4s
 }
 
-.play.old_list.old_item:nth-of-type
-(5) {
+.play .old_list .old_item:nth-of-type(5) {
   -webkit-transition-delay: .4s;
 }
 
@@ -583,15 +578,15 @@ html, body {
   }
 }
 
-.item-7.fans_photo {
+.item-7 .fans_photo {
   margin-bottom: 15px;
 }
 
-.item-7.fans_t {
+.item-7 .fans_t {
   text-indent: 24px;
 }
 
-.item-7.fans_t em {
+.item-7 .fans_t em {
   font-weight: normal;
   font-style: normal;
 }
@@ -605,21 +600,21 @@ html, body {
   display: block;
 }
 
-.play.mod_old {
+.play .mod_old {
   opacity: 1;
 }
 
-.play.mod_old.old_1 {
+.play .mod_old .old_1 {
   opacity: 1;
   -webkit-animation: downTop .8s linear;
 }
 
-.play.mod_old.old_2 {
+.play .mod_old .old_2 {
   opacity: 1;
   -webkit-animation: downTop 1s linear;
 }
 
-.play.mod_old.old_3 {
+.play .mod_old .old_3 {
   opacity: 1;
   -webkit-animation: downTop 1.1s linear;
 }
@@ -744,7 +739,7 @@ html, body {
   margin-right: -22px;
 }
 
-.old_list.old_item {
+.old_list .old_item {
   float: left;
   width: 50%;
   -webkit-box-sizing: border-box;
@@ -752,13 +747,13 @@ html, body {
   margin-bottom: 13px;
 }
 
-.old_list.old_item.old_box {
+.old_list .old_item .old_box {
   border: 2px solid #616261;
   position: relative;
   margin-bottom: 6px;
 }
 
-.old_list.old_item.sg_name {
+.old_list .old_item .sg_name {
   color: #ccc;
   height: 20px;
   width: 100%;
@@ -770,7 +765,7 @@ html, body {
   left: 0;
 }
 
-.old_list.old_item.ol_time {
+.old_list .old_item .ol_time {
   text-align: center;
 }
 

@@ -48,7 +48,7 @@ html, body {
 #wrap {
   position: relative;
   height: 100%;
-  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -386,7 +386,7 @@ html, body {
   -webkit-transition: all .8s ease-in-out .4s;
 }
 
-.play.item-0 .bg {
+.play .item-0 .bg {
   opacity: 1;
 }
 
@@ -455,31 +455,31 @@ html, body {
   -webkit-transform: scale(1);
 }
 
-.play .mod_video {
+.play.mod_video {
   -webkit-transition-delay: .2s;
 }
 
-.play .mod_intro img {
+.play.mod_intro img {
   -webkit-transition-delay: .3s;
 }
 
-.play .mod_intro .per_info {
+.play.mod_intro .per_info {
   -webkit-transition-delay: .4s;
 }
 
-.play .mod_intro .tenp_info {
+.play.mod_intro .tenp_info {
   -webkit-transition-delay: .5s;
 }
 
-.play .mod_year .mod_yntit {
+.play.mod_year .mod_yntit {
   -webkit-transition-delay: .2s;
 }
 
-.play .mod_year .yrdet_box {
+.play.mod_year .yrdet_box {
   -webkit-transition-delay: .4s;
 }
 
-.play .mod_year .year_tenp {
+.play.mod_year .year_tenp {
   -webkit-transition-delay: .5s;
 }
 
@@ -487,7 +487,7 @@ html, body {
   -webkit-transition-delay: .3s;
 }
 
-.play .item-7 .fans_t {
+.play .item-7.fans_t {
   -webkit-transition-delay: .5s;
 }
 
@@ -604,17 +604,17 @@ html, body {
   opacity: 1;
 }
 
-.play .mod_old.old_1 {
+.play .mod_old .old_1 {
   opacity: 1;
   -webkit-animation: downTop .8s linear;
 }
 
-.play .mod_old.old_2 {
+.play .mod_old .old_2 {
   opacity: 1;
   -webkit-animation: downTop 1s linear;
 }
 
-.play .mod_old.old_3 {
+.play .mod_old .old_3 {
   opacity: 1;
   -webkit-animation: downTop 1.1s linear;
 }
@@ -719,7 +719,7 @@ html, body {
   color: #727272;
 }
 
-.item-9 .ten_sptit {
+.item-9.ten_sptit {
   margin-bottom: 17px;
 }
 
@@ -747,13 +747,13 @@ html, body {
   margin-bottom: 13px;
 }
 
-.old_list .old_item.old_box {
+.old_list .old_item .old_box {
   border: 2px solid #616261;
   position: relative;
   margin-bottom: 6px;
 }
 
-.old_list .old_item.sg_name {
+.old_list .old_item .sg_name {
   color: #ccc;
   height: 20px;
   width: 100%;
@@ -765,7 +765,7 @@ html, body {
   left: 0;
 }
 
-.old_list .old_item.ol_time {
+.old_list .old_item .ol_time {
   text-align: center;
 }
 
