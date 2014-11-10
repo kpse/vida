@@ -13,4 +13,7 @@ object Application extends Controller {
     Ok(views.html.cafe(""))
   }
 
+  def changanye() = Action {
+    Ok(views.html.changanye(""))
+  }
 }
