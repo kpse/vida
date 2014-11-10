@@ -712,26 +712,36 @@ var tj_param = {
 //模板
 var data = [
   //0
-  '<div class="box">\
-        <h2>长安夜乐队</h2>\
-  </div>\
-  <div class="bg"></div>',
+  '<div class="bg"></div>',
   //1
   '<div class="bg"></div>',
   //2
-  '<div class="bg"></div>',
+  '<div class="box up" >\
+        <p class="desc">他，陕西著名音乐人，歌手，陕派摇滚音乐的开创者之一，中国梦之声全国30强，城墙的颜色就是他的性格：厚重而包容，悠远而沉默。长安城过去从不缺英雄，但是缺未来的精神，他的歌曲《长安城》到《长安夜》，他的音乐对这座城的爱是婉转而动听，含蓄而柔美，长安的风韵在他的宽厚的嗓音中，像酒，绵长有味，像城，往事千年。他是最能代表陕西内敛、厚重的那种性格的音乐人。他是陕西四大方言法宝级乐队的摇滚中坚力量，他是不善言谈的思想者，他是低调内敛的长安汉，他是长安秦腔摇滚的灵魂人物，<span class="high-light">他是王建房！</span></p>\
+  </div>\
+  <div class="bg"></div>',
   //3
-  '<div class="bg"></div>',
+  '<div class="box left height50" >\
+        <p class="desc">他是用生命歌唱陕派摇滚blues的“醉侠”，一位大隐隐于市的唱作人。一顶黑帽，立体而有故事的胡子，诠释了陕派音乐人极富辨识度的脸。82年开始弹吉他，85年开始写歌，自学了鼓、贝斯、键盘， 80年代中期，全国刮起了迪斯科风潮，他也曾疯狂追赶潮流，并在陕西首届迪斯科大奖赛上获得了第三名。94年的时候，他已经怀揣300多首歌的手稿了。他说，正是因为他把写歌当作写日记，每一首歌都像是自己的孩子，今天，他带着陕派摇滚布鲁斯狂人的头衔震撼回归，陕派崛起，他的风格不可忽略，他，是西安老钱。</p>\
+  </div>\
+  <div class="bg"></div>',
   //4
-  '<div class="bg"></div>',
+  '<div class="box right height50" >\
+        <p class="desc">他，把秦歌当作毕生奉献，拥有职业艺人般的素养，他出生在祖传的唢呐世家，是地道的陕西人，对音乐的痴情，使他从艺术学校的一名教师转变为歌手，他发有十余张秦歌专辑，他的歌曲遍布陕西大街小巷，歌词幽默而风趣，曲风自成一体传唱度极高，为陕派音乐推广立下汗马功劳，他是作曲、作词兼演唱的艺人、陕西省秦歌研究会会长，中国秦歌第一人，他，就是十三狼。他的歌曲将秦人、秦地、秦风有机融合，将十三朝古都的文明历史和悠久文化，蕴含在饱含热血的秦歌当中，是陕派音乐人的先行者。</p>\
+  </div>\
+  <div class="bg"></div>',
   //5
-  '<div class="bg"></div>',
+  '<div class="box up50 height50" >\
+        <p class="desc">他们，陕西音乐圈的一股流行力量， 2013全球华语金曲奖优秀新乐队的得主，他们的作品质朴而细腻，广见于电台广播和影视剧。他们的《西大街的夜晚》翻唱版本多达百种，遍布城市角角落落，城外那一弯护城河水就是他们的性格：安静而清澈，静静的轻抚着这片黄土地的彼岸，摇曳着关于音乐的梦。西安的点点滴滴，都被他们记录在歌曲里面，歌曲无不折射出陕派音乐人的细腻情愫和语言特点。他们是陕西四大方言法宝级乐队的流行新生力量，他们是默默坚守陕派音乐的歌者，是未来陕西方言音乐的发扬者，<span class="high-light">他们是玄乐队！</span></p>\
+  </div>\
+  <div class="bg"></div>',
   //6
-  '<div class="bg"></div>',
+  '<div class="box left height50" >\
+        <p class="desc">来自天山脚下的他，有点像最早在天山南北的艺人，拥有火一样的热情，喷泉般不停息的灵感，骆驼刺红柳一样倔强而旺盛的生命力，他音乐风格无法固定，他永远在创新，永远在突破，永远在变幻莫测的舞台上给你不一样的惊喜，他的现场令人折服令人震撼，他的态度令人敬畏，他的音乐素养让人大叹不已，他有什么样的情绪就写什么样的歌，以至于我们不仅能听到bluse、punk、pop以及我们所知道的各种前卫音乐形式，他是新疆人，却把一脉热血倾洒在陕西的黄土地上，他是让人致敬的新一代陕派音乐人，他，是阿里。</p>\
+  </div>\
+  <div class="bg"></div>',
   //7
-  '<div class="bg"></div>',
-  //8
-  '<div class="bg"></div>'
+  '<div class="bg order"></div>'
 ];
 
 var comdata = [[
@@ -761,14 +771,13 @@ allItems = data.length;
 function preloading() {
   var imgurls = [
     'assets/images/cover.jpg',
-    'assets/images/2.jpg',
-    'assets/images/3.jpg',
-    'assets/images/王建房介绍4.jpg',
-    'assets/images/老钱介绍5.jpg',
-    'assets/images/十三郎介绍6.jpg',
-    'assets/images/玄乐队介绍7.jpg',
-    'assets/images/阿里介绍8.jpg',
-    'assets/images/9.jpg'
+    'assets/images/menu.jpg',
+    'assets/images/wangjianfang.jpg',
+    'assets/images/laoqian.jpg',
+    'assets/images/shisanlang.jpg',
+    'assets/images/xuanyuedui.jpg',
+    'assets/images/ali.jpg',
+    'assets/images/order.png'
   ];
   var imgs = [], loaded = 0;
   for (var i = 0; i < imgurls.length; i++) {

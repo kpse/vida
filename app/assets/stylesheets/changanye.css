@@ -70,12 +70,89 @@ html, body {
   -webkit-transition: all .8s ease-out;
 }
 
+@-webkit-keyframes box_up_action {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 33%;
+  }
+}
+
+@-webkit-keyframes box_up_50_action {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes box_left_action {
+  0% {
+    right:100%;
+  }
+  100% {
+    right:0;
+  }
+}
+
+@-webkit-keyframes box_right_action {
+  0% {
+    left:100%;
+  }
+  100% {
+    left:0;
+  }
+}
+
+
+
 .item .box {
   position: relative;
   z-index: 5;
-  width: 88%;
+  width: 100%;
+  top: 100%;
+  height: 67%;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+.item .box.height50 {
+  top: 100%;
+  height: 50%;
+}
+
+.play.item .box {
+  top: 33%;
+}
+
+.play.item .box.height50 {
+  top: 50%;
+}
+
+.item .box .desc {
   margin: 0 5% 0 7%;
-  height: 100%;
+}
+
+.item .box .high-light {
+  color: red;
+}
+
+.play.item .box.up {
+  -webkit-animation: box_up_action 1.5s 1 linear;
+}
+
+.play.item .box.up50 {
+  -webkit-animation: box_up_50_action 1.5s 1 linear;
+}
+
+.play.item .box.left {
+  -webkit-animation: box_left_action 1.5s 1 linear;
+}
+
+.play.item .box.right {
+  -webkit-animation: box_right_action 1.5s 1 linear;
 }
 
 .item .bg {
@@ -85,6 +162,8 @@ html, body {
   top: 0;
   width: 100%;
   height: 100%;
+  background: no-repeat center center;
+  background-size: cover;
 }
 
 .item img {
@@ -119,7 +198,7 @@ html, body {
 .icon_share {
   width: 34px;
   height: 34px;
-  background-position: 0 - 70 px;
+  background-position: 0 -70px;
   margin-right: 3px;
 }
 
@@ -315,7 +394,7 @@ html, body {
   width: 200px;
   height: 10px;
   background: #f5ce13;
-  margin: -10px 0 0 - 100 px;
+  margin: -10px 0 0 -100px;
   top: 50%;
   left: 50%;
   border-radius: 5px;
@@ -332,11 +411,6 @@ html, body {
   border-radius: 5px;
 }
 
-.item .bg, .item-0 .bg {
-  background: no-repeat center center;
-  background-size: cover;
-}
-
 .item-0 {
   background-color: #dbdbdb;
 }
@@ -346,36 +420,34 @@ html, body {
 }
 
 .item-1 .bg {
-  background-image: url(../images/2.jpg);
+  background-image: url(../images/menu.jpg);
 }
 
 .item-2 .bg {
-  background-image: url(../images/3.jpg);
+  background-image: url(../images/wangjianfang.jpg);
 }
 
 .item-3 .bg {
-  background-image: url(../images/王建房介绍4.jpg);
+  background-image: url(../images/laoqian.jpg);
 }
 
 .item-4 .bg {
-  background-image: url(../images/老钱介绍5.jpg);
+  background-image: url(../images/shisanlang.jpg);
 }
 
 .item-5 .bg {
-  background-image: url(../images/十三郎介绍6.jpg);
+  background-image: url(../images/xuanyuedui.jpg);
 }
 
 .item-6 .bg {
-  background-image: url(../images/玄乐队介绍7.jpg);
+  background-image: url(../images/ali.jpg);
 }
 
 .item-7 .bg {
-  background-image: url(../images/阿里介绍8.jpg);
+  background-image: url(../images/order.png);
+  background-size: 100%;
 }
 
-.item-8 .bg {
-  background-image: url(../images/9.jpg);
-}
 
 .item-0 h2 {
   display: none;
@@ -386,7 +458,7 @@ html, body {
   -webkit-transition: all .8s ease-in-out .4s;
 }
 
-.play .item-0 .bg {
+.play.item-0 .bg {
   opacity: 1;
 }
 
@@ -535,7 +607,7 @@ html, body {
 .ynt_song:after {
   content: "";
   display: block;
-  background-position: 0 - 185 px;
+  background-position: 0 -185px;
   width: 16px;
   height: 16px;
   position: absolute;
@@ -807,4 +879,8 @@ html, body {
 
 #share_btn_tip {
   z-index: 991;
+}
+
+.desc {
+  font-size: 45px;
 }
