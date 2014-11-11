@@ -443,7 +443,6 @@ var audioInit = 0
 function slideCallback(index) {
     if (index > 0 && !audioInit) {
         initAudio();
-
     }
     if (index == 0) {
         $('.mod_control').className += ' firstScr'
@@ -629,7 +628,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }, 100);
-    initAudio();
+
     $('#arr').onclick = function () {
         nextImg();
     };
