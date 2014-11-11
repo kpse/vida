@@ -443,7 +443,7 @@ var audioInit = 0
 function slideCallback(index) {
     if (index > 0 && !audioInit) {
         initAudio();
-        audioInit = true;
+
     }
     if (index == 0) {
         $('.mod_control').className += ' firstScr'
@@ -481,6 +481,7 @@ function initAudio() {
             return false;
         }
         $('#audio').play();
+        audioInit = true;
     }
 };
 
@@ -628,26 +629,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }, 100);
-}, false);
-
-
-window.addEventListener('load', function () {
     initAudio();
-    audioInit = true;
+    $('#arr').onclick = function () {
+        nextImg();
+    };
+
+    $('#btn_audio').onclick = function (e) {
+        e.preventDefault();
+        if (/_off/.test(this.className)) {
+            $('#audio').play();
+            this.className = 'audio_btn icon_sound_on';
+        } else {
+            $('#audio').pause();
+            this.className = 'audio_btn icon_sound_off';
+        }
+        return false;
+    }
 }, false);
 
-$('#arr').onclick = function () {
-    nextImg();
-};
 
-$('#btn_audio').onclick = function (e) {
-    e.preventDefault();
-    if (/_off/.test(this.className)) {
-        $('#audio').play();
-        this.className = 'audio_btn icon_sound_on';
-    } else {
-        $('#audio').pause();
-        this.className = 'audio_btn icon_sound_off';
-    }
-    return false;
-}
