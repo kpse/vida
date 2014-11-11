@@ -214,8 +214,10 @@ html, body {
   background-position: 0 0;
 }
 
-.icon_sound_off {
-  background-position: -600px -22px;
+.audio_btn.icon_sound_off {
+  background-position: -693px -22px;
+
+  background-size: 724% 115%;
 }
 
 .icon_sound_on {
