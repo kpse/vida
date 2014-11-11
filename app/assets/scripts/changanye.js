@@ -368,14 +368,14 @@ allItems = data.length;
 function preloading() {
     var imgurls = [
         'assets/images/cover.jpg',
-        'assets/images/menu.jpg',
-        'assets/images/wangjianfang.jpg',
-        'assets/images/laoqian.jpg',
-        'assets/images/shisanlang.jpg',
-        'assets/images/xuanyuedui.jpg',
-        'assets/images/ali.jpg',
-        'assets/images/order.jpg',
-        'assets/images/small_icons.png'
+        'http://vida.qiniudn.com/menu.jpg',
+        'http://vida.qiniudn.com/wangjianfang.jpg',
+        'http://vida.qiniudn.com/laoqian.jpg',
+        'http://vida.qiniudn.com/shisanlang.jpg',
+        'http://vida.qiniudn.com/xuanyuedui.jpg',
+        'http://vida.qiniudn.com/ali.jpg',
+        'http://vida.qiniudn.com/order.jpg',
+        'http://vida.qiniudn.com/small_icons.png'
     ];
     var imgs = [], loaded = 0;
     for (var i = 0; i < imgurls.length; i++) {
