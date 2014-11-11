@@ -1,6 +1,5 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 
 object Application extends Controller {
@@ -14,6 +13,6 @@ object Application extends Controller {
   }
 
   def changanye() = Action {
-    Ok(views.html.changanye(""))
+    Ok(views.html.changanye("陕派摇滚&长安夜"))
   }
 }
