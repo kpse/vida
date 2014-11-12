@@ -75,7 +75,16 @@ html, body {
     top: 100%;
   }
   100% {
-    top: 33%;
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes text_up_action {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 40%;
   }
 }
 
@@ -113,9 +122,18 @@ html, body {
   z-index: 5;
   width: 100%;
   top: 100%;
-  height: 67%;
+  height: 600px;
+}
+
+.item .text-bg {
+  position: absolute;
+  height: 33%;
+  bottom: 0;
+  width: 100%;
   background-color: #000000;
   opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .item .box.height50 {
@@ -124,7 +142,7 @@ html, body {
 }
 
 .play.item .box {
-  top: 33%;
+  top: -100%;
 }
 
 .play.item .box.height50 {
@@ -140,7 +158,7 @@ html, body {
 }
 
 .play.item .box.up {
-  -webkit-animation: box_up_action 5s 1 linear;
+  -webkit-animation: box_up_action 7s 1 linear;
 }
 
 .play.item .box.up50 {
