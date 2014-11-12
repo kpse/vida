@@ -188,24 +188,13 @@ html, body {
   margin: 0 auto;
 }
 
-.icon, .audio_btn, .ynt_song:after, .bg_fans_title p:before, .ten_fptit:before, .ten_sptit:before {
-  display: inline-block;
-  background: url(../images/small_icons.png) no-repeat;
-  background-size: 700%;
-  vertical-align: middle;
-}
-
-.icon_share {
-  width: 120px;
-  height: 120px;
-  background-position: -260px 0;
-  background-size: 535%;
-}
-
 .icon_slide {
-  width: 80px;
-  height: 109px;
+  display: block;
+  width: 119px;
+  height: 169px;
   -webkit-animation: start 1.5s infinite linear;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 100%;
 }
 
 .icon_favorite {
@@ -215,24 +204,22 @@ html, body {
 }
 
 .audio_btn.icon_sound_off {
-  background-position: -693px -22px;
-
-  background-size: 724% 115%;
+  background: url(../images/sound_off.png) no-repeat;
+  background-size: 80%;
 }
 
 .icon_sound_on {
-  background-position: -600px -22px;
+  background: url(../images/sound_on.png) no-repeat;
+  background-size: 82%;
 }
 
 .audio_btn {
-  background-position: -600px -22px;
-  background-size: 600%;
-  width: 120px;
-  height: 120px;
+  width: 183px;
+  height: 186px;
   position: absolute;
   z-index: 990;
-  right: 5%;
-  bottom: 14px;
+  right: 2%;
+  bottom: 0;
 }
 
 .icon_yqlogo {
@@ -248,29 +235,20 @@ html, body {
   z-index: 20;
   left: 50%;
   margin-left: -60px;
-  bottom: 15px;
+  bottom: 70px;
   width: 120px;
   height: 120px;
-  overflow: hidden;
-  text-align: center;
-  border: 1px solid #fff;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  background-color: #ffffff;
 }
 
 
 @-webkit-keyframes start {
   0%, 50% {
-    opacity: 1;
     -webkit-transform: translate(0, 12px);
   }
   75% {
-    opacity: .6;
     -webkit-transform: translate(0, 2px);
   }
   100% {
-    opacity: .3;
     -webkit-transform: translate(0, -8px);
   }
 }
