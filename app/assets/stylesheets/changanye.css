@@ -99,23 +99,21 @@ html, body {
 
 @-webkit-keyframes box_left_action {
   0% {
-    right:100%;
+    right: 100%;
   }
   100% {
-    right:0;
+    right: 0;
   }
 }
 
 @-webkit-keyframes box_right_action {
   0% {
-    left:100%;
+    left: 100%;
   }
   100% {
-    left:0;
+    left: 0;
   }
 }
-
-
 
 .item .box {
   position: relative;
@@ -131,7 +129,7 @@ html, body {
   bottom: 0;
   width: 100%;
   background-color: #000000;
-  opacity: 0.8;
+  opacity: 0.7;
   z-index: 10;
   overflow: hidden;
 }
@@ -158,7 +156,7 @@ html, body {
 }
 
 .play.item .box.up {
-  -webkit-animation: box_up_action 7s 1 linear;
+  -webkit-animation: box_up_action 10s 1 linear;
 }
 
 .play.item .box.up50 {
@@ -257,7 +255,6 @@ html, body {
   width: 120px;
   height: 120px;
 }
-
 
 @-webkit-keyframes start {
   0%, 50% {
@@ -406,9 +403,10 @@ html, body {
 }
 
 .item-7 .bg {
-  background-image: url(http://vida.qiniudn.com/order.jpg);
+  background-image: url(http://vida.qiniudn.com/last_damai.jpg);
+  background-size: contain;
+  background-color: #171818;
 }
-
 
 .item-0 h2 {
   display: none;
@@ -844,4 +842,29 @@ html, body {
 
 .desc {
   font-size: 45px;
+}
+
+.order-link {
+  position: absolute;
+  display: block;
+  width: 128px;
+  height: 128px;
+  top: 5%;
+  left: 5%;
+  z-index: 10;
+  .cart {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.order-text {
+  position: absolute;
+  display: inline-block;
+  line-height: 128px;
+  font-size: 65px;
+  z-index: 20;
+  top: 5%;
+  left: 21%;
+  color: #0d5364;
 }

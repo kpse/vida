@@ -354,7 +354,10 @@ var data = [
     </div></div>\
     <div class="bg"></div>',
     //7
-    '<a href="http://item.damai.cn/74549.html"><div class="bg order"></div></a>'
+    '<a class="order-link" href="http://item.damai.cn/74549.html">\
+    <img class="cart" src="assets/images/cart.png"/></a>\
+    <p class="order-text">大麦网在线订票</p>\
+    <div class="bg order"></div>'
 ];
 
 
@@ -374,7 +377,7 @@ function preloading() {
         'http://vida.qiniudn.com/shisanlang.jpg',
         'http://vida.qiniudn.com/xuanyuedui.jpg',
         'http://vida.qiniudn.com/ali.jpg',
-        'http://vida.qiniudn.com/order.jpg'
+        'http://vida.qiniudn.com/last_damai.jpg'
     ];
     var imgs = [], loaded = 0;
     for (var i = 0; i < imgurls.length; i++) {
