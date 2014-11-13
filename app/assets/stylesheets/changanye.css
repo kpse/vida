@@ -156,7 +156,7 @@ html, body {
 }
 
 .play.item .box.up {
-  -webkit-animation: box_up_action 10s 1 linear;
+  -webkit-animation: box_up_action 20s 1 linear;
 }
 
 .play.item .box.up50 {
