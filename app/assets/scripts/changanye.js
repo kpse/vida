@@ -1,10 +1,10 @@
 var isAd2 = /android\s*2\./i.test(navigator.userAgent);
 var mi2a = /mi 2a/i.test(navigator.userAgent);
 var share = {
-    title: '陕派摇滚&长安夜',
+    title: '《陕派摇滚&长安夜》本土摇滚大PARTY',
     link: 'http://114.215.129.240/changanye',
-    desc: '陕派摇滚&长安夜介绍及订票信息',
-    img: 'http://114.215.129.240/assets/images/rock.jpg'
+    desc: '玄乐队｜十三狼｜阿里与乐队｜老钱与乐队｜王建房与朋友们｜11月28日晚｜一起来摇滚！',
+    img: 'http://vida.qiniudn.com/rock_icon.jpg'
 };
 function $(o) {
     return document.querySelector(o)
@@ -267,6 +267,7 @@ document.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, false);
 
+
 //以下为统计和分享
 function initBtnShare() {
     $('#btn_share').style.display = 'block';
@@ -275,10 +276,61 @@ function initBtnShare() {
         setTimeout(function () {
             $('#share_btn_tip').style.display = 'none';
         }, 3000)
-        tj.sendClick('act.year10.y06.clickshare');
         return false;
     }, false);
 }
+
+function weixinReady() {
+
+    if (!window.share) {
+        return;
+    }
+    initBtnShare();
+    //朋友圈
+    WeixinJSBridge.on("menu:share:timeline", function (e) {
+        var data = {
+            img_url: share.img,
+            img_width: "173",
+            img_height: "173",
+            link: share.link + '?ADTAG=weixin',
+            desc: share.desc,
+            title: share.title
+        };
+        WeixinJSBridge.invoke("shareTimeline", data, function (res) {
+            WeixinJSBridge.log(res.err_msg)
+        });
+    });
+    //微博
+    WeixinJSBridge.on("menu:share:weibo", function () {
+        WeixinJSBridge.invoke("shareWeibo", {
+            "content": share.title + ' - ' + share.desc,
+            "url": share.link + '?ADTAG=weixin'
+        }, function (res) {
+            WeixinJSBridge.log(res.err_msg);
+        });
+
+    });
+    //朋友
+    WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+        var data = {
+            img_url: share.img,
+            img_width: "173",
+            img_height: "173",
+            link: share.link + '?ADTAG=weixin',
+            desc: share.desc,
+            title: share.title
+        };
+        WeixinJSBridge.invoke("sendAppMessage", data, function (res) {
+            WeixinJSBridge.log(res.err_msg)
+        });
+
+    });
+    if ($('#share_btn_tip')) {
+        $('#share_btn_tip').style.top = '14px'
+        $('#arrow_top').style.display = 'block'
+    }
+}
+
 
 function getParam(name, url) {
     var r = new RegExp("(\\?|#|&)" + name + "=(.*?)(#|&|$)")
@@ -648,6 +700,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return false;
     }
+
 }, false);
+
+
+//微信分享
+if (typeof WeixinJSBridge == 'undefined') {
+    document.addEventListener('WeixinJSBridgeReady', weixinReady);
+} else {
+    weixinReady();
+}
 
 

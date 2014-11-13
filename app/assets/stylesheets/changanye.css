@@ -204,20 +204,7 @@ html, body {
   margin: 0 auto;
 }
 
-.icon_slide {
-  display: block;
-  width: 119px;
-  height: 169px;
-  -webkit-animation: start 1.5s infinite linear;
-  background: url(../images/arrow.png) no-repeat;
-  background-size: 100%;
-}
 
-.icon_favorite {
-  width: 34px;
-  height: 34px;
-  background-position: 0 0;
-}
 
 .audio_btn.icon_sound_off {
   background: url(../images/sound_off.png) no-repeat;
@@ -230,8 +217,8 @@ html, body {
 }
 
 .audio_btn {
-  width: 183px;
-  height: 186px;
+  width: 140px;
+  height: 140px;
   position: absolute;
   z-index: 990;
   right: 2%;
@@ -252,8 +239,40 @@ html, body {
   left: 50%;
   margin-left: -60px;
   bottom: 70px;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+}
+
+.mod_share {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  bottom: 16px;
+  width: 100px;
+  height: 100px;
+}
+
+.icon_slide {
+  display: block;
+  width: 100px;
+  height: 141px;
+  -webkit-animation: start 1.5s infinite linear;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 100%;
+}
+
+.icon_share {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url(../images/share.png) no-repeat;
+  background-size: 100%;
+}
+
+.icon_favorite {
+  width: 34px;
+  height: 34px;
+  background-position: 0 0;
 }
 
 @-webkit-keyframes start {
@@ -283,25 +302,27 @@ html, body {
 }
 
 #share_btn_tip {
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  height: 32px;
-  line-height: 32px;
+  height: 46px;
+  right: 25px;
+  line-height: 46px;
   padding: 0 10px;
-  font-size: 18px;
+  font-size: 46px;
   color: #fff;
   border: 1px solid #3e3e3e;
   border-radius: 2px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
   background: #383838;
+  top: 1%;
 }
 
 #share_btn_tip i {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  height: 46px;
   background: #383838;
   right: 25px;
+  display: inline-block;
 }
 
 #share_btn_tip .bottom {

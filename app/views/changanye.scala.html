@@ -25,12 +25,16 @@
         <li><span>8</span></li>
       </ul>
       <div class="mod_start" id="arr" style="display:none"><span class="icon icon_slide"></span></div>
+      <div class="mod_share" style="display:none" id="btn_share"><span class="icon icon_share"></span></div>
     </div>
 
       <!--播放控制-->
     <div class="audio_btn icon_sound_on" id="btn_audio" style="display:none"></div><!--将icon_sound_on 样式名改为 icon_sound_off 即可设置成静音 -->
 
     <audio src="http://vida-audio.qiniudn.com/changanye.mp3?fromtag=0" preload id="audio"></audio>
+
+    <div id="share_btn_tip" style="display:none">
+      点击这里分享<i id="arrow_top" class="top"></i><i id="arrow_bottom" class="bottom"></i></div>
 
     <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("scripts/changanye.js")" type="text/javascript"></script>
