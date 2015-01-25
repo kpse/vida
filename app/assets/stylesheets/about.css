@@ -1,0 +1,134 @@
+.header {
+  height: 0px;
+}
+
+.footer {
+  display: block;
+  bottom: -1px;
+  position: absolute;
+  padding: 0;
+  width: 105%;
+  height: 50px;
+  max-width: 336px;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  height: 50px;
+  color: #000;
+  margin-bottom: -9px;
+  text-align: center;
+  display: block;
+  &.active {
+    color: red;
+  }
+  &.home {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -18px 0;
+    background-size: 350px 50px;
+  }
+  &.search {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -79px 0;
+    background-size: 352px 50px;
+  }
+  &.party {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -137px 0;
+    background-size: 350px 50px;
+  }
+  &.shopping {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -203px 0;
+    background-size: 350px 50px;
+  }
+  &.profile {
+    background: #231f20 url(../images/menu_bg.png) no-repeat -266px 4px;
+    background-size: 350px 50px;
+  }
+}
+
+
+
+.hero {
+  min-height: 200px;
+  min-width: 600px;
+  width: 90%;
+  margin: 10px;
+  img {
+    width: 300px;
+  }
+}
+
+.content {
+  font-size: 8px;
+  margin-left: 160px;
+  border-left: 1px dashed brown;
+  p {
+    line-height: 10px;
+    display: inline-block;
+  }
+}
+
+.line {
+  margin-left: 2px;
+}
+
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;
+  height:100%;
+}
+
+#container {
+  min-height:100%;
+  position:relative;
+}
+.main-content {
+  padding-bottom: 50px;   /* Height of the footer */
+}
+
+.separator {
+  display: block;
+  height: 10px;
+  background: #fff url(../images/bg.png) no-repeat -12px -112px;
+}
+.header-separator {
+  margin-top: -2px;
+}
+
+.footer-separator {
+  position: absolute;
+  width: 100%;
+  bottom: 55px;
+}
+
+.next-page {
+  color: orange;
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+
+
+.title {
+  text-align: right;
+  color:orange;
+  .category-name {
+    margin:0;
+    line-height: 26px;
+  }
+}
+
+.vol-separator {
+  background: #fff url(../images/bg.png) no-repeat -200px -112px;
+  height: 50px;
+  margin-top: -21px;
+}
+
+.image-content {
+  background: #fff url(../images/hello.png) no-repeat;
+  background-size: 100%;
+  width: 180px;
+  height: 70px;
+  margin: 35px auto;
+}
