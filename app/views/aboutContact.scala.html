@@ -1,0 +1,42 @@
+@(title: String)
+
+@aboutTemplate(title) {
+    <header id="site-header" class="group has-cart">
+
+        <div class="logo">
+                <!--No Logo-->
+            <h1><a href="@routes.Home.main()"><span style="color : red">RED</span>|N</a></h1>
+        </div>
+        <nav id="main-nav">
+            <span class="toggle">
+                <a href="#" data-icon="≡">Menu</a>
+            </span>
+            <ul id="menu" class="group" style="display: none;">
+                <li class=" page page_title"><a href="@routes.Home.aboutN()">About N 集恩</a></li>
+                <li class=" page page_title"><a href="@routes.Home.aboutRed()">About RED</a></li>
+                <li class="page page_title"><a href="@routes.Home.aboutWork()">Work</a></li>
+                <li class=" page page_title"><a href="@routes.Home.aboutTeam()">Team</a></li>
+                <li class="current page page_title"><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="wrapper background-container">
+
+        <div id="main-content" role="main">
+            <section class="content-editor">
+                <h1 class="grey-content title">Contact</h1>
+                <h1 class="chinese title">联系方式</h1>
+                <p class="grey-content">
+                    Address in English
+                </p>
+                <p class="chinese">
+                    中文地址
+                </p>
+            </section>
+        </div>
+    </div>
+}
+
