@@ -9,7 +9,7 @@ object Home extends Controller {
   }
 
   def aboutN = Action {
-    Ok(views.html.aboutN("Your new application is ready."))
+    Ok(views.html.aboutN("About N interior - RED|N"))
   }
 
 }
