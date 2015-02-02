@@ -35,18 +35,18 @@
 /* BACKGROUND IMAGES */
 body:before,
 body #background-container {
-  background-image: url('../images/hero.jpg');
-
-
-
-
   /* Fullscreen */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url('../images/hero.jpg') no-repeat fixed center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrapper.home {
+  background: url('../images/hero.jpg') no-repeat fixed center center;
+  width: 100%;
+  height: 100%;
   background-size: cover;
 }
 
